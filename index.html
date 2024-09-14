@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Fill in Your Resume Details</h2>
+            <form id="resumeForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+
+                    <label for="profilePic">Profile Picture:</label>
+                    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Education</legend>
+                    <label for="education">Education Details:</label>
+                    <textarea id="education" name="education" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Skills</legend>
+                    <label for="skills">Skills (comma-separated):</label>
+                    <textarea id="skills" name="skills" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <label for="experience">Work Experience:</label>
+                    <textarea id="experience" name="experience" required></textarea>
+                </fieldset>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+
+        <!-- Resume Output Section -->
+        <section id="resumeOutput" class="resume-output">
+            <div class="resume-container">
+                <aside class="resume-sidebar">
+                    <div class="profile-pic">
+                        <!-- Profile picture will be dynamically inserted -->
+                        <img id="outputProfilePic" alt="Profile Picture">
+                    </div>
+                    <div class="contact-info">
+                        <h2 id="outputName"></h2>
+                        <p id="outputLocation"></p>
+                        <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+                        <p><strong>Phone:</strong> <span id="outputPhone"></span></p>
+                    </div>
+                </aside>
+
+                <div class="resume-main">
+                    <section id="outputEducation">
+                        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <div class="resume-section-content">
+                            <!-- Education details go here -->
+                        </div>
+                    </section>
+
+                    <section id="outputSkills">
+                        <h2><i class="fas fa-tools"></i> Skills</h2>
+                        <div class="resume-section-content">
+                            <!-- Skills details go here -->
+                        </div>
+                    </section>
+
+                    <section id="outputExperience">
+                        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                        <div class="resume-section-content">
+                            <!-- Work experience details go here -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

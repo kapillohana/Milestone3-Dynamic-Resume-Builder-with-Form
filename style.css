@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2rem;
+    color: #008080;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f5f;
+}
+
+/* Resume Template */
+.resume-output {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden until the resume is generated */
+}
+
+.resume-container {
+    display: flex;
+    gap: 20px;
+}
+
+.resume-sidebar {
+    flex: 1;
+    background-color: #008080;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid white;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.resume-main {
+    flex: 3;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    margin-bottom: 30px
+}
+
+.resume-main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #008080;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 5px;
+}
+
+.resume-section-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows skills to wrap into multiple lines */
+    gap: 10px 5px; /* Adds space between skill tags both horizontally and vertically */
+}
+
+.resume-section-content span {
+    background-color: #008080;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 10px; /* Adds space between the rows of skills */
+    border-radius: 3px;
+    display: inline-block;
+}
